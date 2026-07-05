@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rowspan and Colspan Table</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 600px;
+            margin: 20px auto;
+        }
+
+        td{
+            border: 2px solid black;
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        .logo{
+            background-color: #e6cce6;
+        }
+
+        .topmenu{
+            background-color: #e8e8c8;
+        }
+
+        .sidemenu{
+            background-color: #e8e8c8;
+        }
+
+        .content{
+            background-color: #d9e9ed;
+        }
+
+        .ads{
+            background-color: #e6cce6;
+        }
+
+        .footer{
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+<h3>Table with column and row spanned:</h3>
+
+<table>
+    <tr>
+        <td class="logo">Logo</td>
+        <td class="topmenu" colspan="3">Top Menu</td>
+    </tr>
+
+    <tr>
+        <td class="sidemenu" rowspan="2">Side Menu</td>
+        <td class="content">World News</td>
+        <td class="content">Financial</td>
+        <td class="ads" rowspan="2">List of Ads</td>
+    </tr>
+
+    <tr>
+        <td class="content">Technology</td>
+        <td class="content">Sports</td>
+    </tr>
+
+    <tr>
+        <td class="footer" colspan="4">Footer</td>
+    </tr>
+</table>
+
+</body>
+</html>

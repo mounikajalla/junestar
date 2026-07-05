@@ -1,0 +1,63 @@
+/* Company Name */
+#company-name{
+    text-align:center;
+    color:darkblue;
+    font-size:35px;
+}
+
+/* Employee Cards */
+.employee-card{
+    width:300px;
+    margin:20px auto;
+    padding:15px;
+    border:2px solid black;
+    border-radius:10px;
+    background:white;
+}
+
+/* Employee Name */
+.employee-name{
+    color:blue;
+    font-size:24px;
+}
+
+/* Employee Details */
+.employee-details{
+    color:green;
+}
+
+/* Employee after Team Lead */
+.team-lead + .employee-card{
+    border:3px solid red;
+}
+
+/* Employees after Team Lead */
+.team-lead ~ .employee-card{
+    background:#f2f2f2;
+}
+
+/* First Employee */
+.employee-card:first-child{
+    border:4px solid gold;
+}
+
+.employee-card:first-child .employee-name::after{
+    content:" ⭐ Star Performer";
+    color:orange;
+}
+
+/* Last Employee */
+.employee-card:last-child .employee-name::after{
+    content:" 🤝 Support Team";
+    color:green;
+}
+
+/* Employee Icon */
+.employee-name::before{
+    content:"👨‍💼 ";
+}
+
+/* Alternate Employee Cards */
+.employee-card:nth-child(even){
+    background:#e6f7ff;
+}
