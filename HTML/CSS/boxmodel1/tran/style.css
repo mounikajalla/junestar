@@ -1,0 +1,60 @@
+/* कार्ड का बेसिक स्टाइल */
+.course-card {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  background-color: #f7b924; /* पाइथन कोर्स का पीला रंग */
+  border-radius: 8px;
+  overflow: hidden; /* यह ज़रूरी है ताकि ओवरले कार्ड से बाहर न दिखे */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+/* फ्रंट कंटेंट का स्टाइल */
+.card-front {
+  padding: 20px;
+  color: #333;
+}
+
+/* ओवरले (सिलेबस) का स्टाइल - शुरुआत में यह नीचे छुपा रहेगा */
+.card-overlay {
+  position: absolute;
+  top: 100%; /* कार्ड के ठीक नीचे छुपा हुआ */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0d1b2a; /* डार्क बैकग्राउंड जैसा वीडियो में है */
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  
+  /* ⚡ मुख्य ट्रांज़िशन कोड यहाँ है ⚡ */
+  transition: transform 0.4s ease-in-out; 
+}
+
+/* 🚀 होवर करने पर ट्रांज़िशन इफ़ेक्ट */
+.course-card:hover .card-overlay {
+  /* ओवरले को 100% ऊपर खींचता है, जिससे यह फ्रंट कंटेंट को ढक लेता है */
+  transform: translateY(-100%); 
+}
+
+/* ओवरले के अंदर की लिस्ट का स्टाइल */
+.card-overlay ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.card-overlay li {
+  margin: 10px 0;
+  padding-left: 15px;
+  position: relative;
+}
+
+/* लिस्ट के सामने छोटा डॉट बुलेट बनाने के लिए */
+.card-overlay li::before {
+  content: "•";
+  color: #f7b924;
+  position: absolute;
+  left: 0;
+}
