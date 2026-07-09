@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#111;
+    color:white;
+}
+
+/* Header */
+
+header{
+    background:#000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+}
+
+header h1{
+    color:red;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:18px;
+}
+
+nav a:hover,
+.active{
+    color:red;
+    border-bottom:2px solid red;
+}
+
+/* Banner */
+
+.banner{
+    height:350px;
+    background:url("images/banner.jpg") center/cover no-repeat;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding-left:60px;
+}
+
+.banner h2{
+    font-size:45px;
+}
+
+.banner p{
+    margin:15px 0;
+    font-size:20px;
+}
+
+button{
+    width:150px;
+    padding:12px;
+    background:red;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:darkred;
+}
+
+/* Movie Cards */
+
+.movies{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:40px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:220px;
+    background:#222;
+    border-radius:10px;
+    overflow:hidden;
+    position:relative;
+    transition:0.4s;
+    padding-bottom:15px;
+}
+
+.card:nth-child(even){
+    background:#333;
+}
+
+.card:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 15px red;
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:10px;
+}
+
+.card p{
+    padding:0 10px;
+    line-height:22px;
+}
+
+.card p span{
+    color:red;
+    font-size:30px;
+    font-weight:bold;
+}
+
+.tag{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:red;
+    color:white;
+    padding:5px 10px;
+    border-radius:5px;
+    font-size:12px;
+}
+
+.rating{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:gold;
+    color:black;
+    padding:5px 8px;
+    border-radius:15px;
+    font-size:12px;
+}
